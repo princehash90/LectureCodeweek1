@@ -1,4 +1,4 @@
-package org.example;
+package org.example.week2;
 
 public class OilChange {
     public static void main(String[] args) {

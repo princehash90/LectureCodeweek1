@@ -1,4 +1,4 @@
-package org.example;
+package org.example.week2;
 
 public class RocketCountDown {
     public static void main(String[] args) {
