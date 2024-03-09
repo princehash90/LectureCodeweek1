@@ -12,7 +12,7 @@ public class Snow {
         snowfall.put("February", 10.0);
         snowfall.put("December", 3.1);
         snowfall.put("March", 4.1);
-        snowfall.put("April",0.0);
+        snowfall.put("April",0.0);//
 
         System.out.println(snowfall);
 
