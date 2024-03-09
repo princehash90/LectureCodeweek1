@@ -25,7 +25,7 @@ public class roadTripPlanner {
             int miles= tripPlanner.get(cities);
             if (miles<=maxDistance){
                 //System.out.println(cities + " is " + miles+ " miles away");
-                citiesInRange.add(cities);
+                citiesInRange.add(cities);// adds the cities
 
             }
         }
