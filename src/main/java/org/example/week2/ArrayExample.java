@@ -12,7 +12,7 @@ public class ArrayExample {
         className [0]="Java ";
         className[1]= "C#";
         className [2]="Web";
-        System.out.println("one of the second year classes is"+ className[1]);
+        System.out.println("one of the second year classes is "+ className[1]);
         int numberOfClasses = className.length;// finding out the number data stored in a array
         System.out.println(numberOfClasses);
 
