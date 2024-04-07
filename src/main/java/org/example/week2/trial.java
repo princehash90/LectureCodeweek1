@@ -1,12 +1,42 @@
-package org.example.week2;
+package userinput;
+
+import java.util.Scanner;
 
 public class trial {
+
     public static void main(String[] args) {
-        Printer(5, 20);
+
+        Scanner input = new Scanner(System.in);
+
+        //allow user  input;
+        System.out.println("How many numbers do you want to enter?");
+        int num = input.nextInt();
+
+        int array[] = new int[num];
+
+        System.out.println("Enter the " + num + " numbers now.");
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = input.nextInt();
+        }
+
+        //you notice that now the elements have been stored in the array .. array[]
+
+        System.out.println("These are the numbers you have entered.");
+        printArray(array);
+
+        input.close();
+
     }
-    public static void Printer (int num1, int num2) {
-        for (int i=num1;i<=num2; i++) {
-            System.out.println(i);
+
+    //this method prints the elements in an array......
+    //if this case is true, then that's enough to prove to you that the user input has  //been stored in an array!!!!!!!
+    public static void printArray(int arr[]) {
+
+        int n = arr.length;
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }
