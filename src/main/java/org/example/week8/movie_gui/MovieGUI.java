@@ -21,12 +21,12 @@ public class MovieGUI extends JFrame{
 
     MovieGUI(){
         setContentPane(mainPanel);
-        setPreferredSize(new Dimension(400,300));
+        setPreferredSize(new Dimension(400,300));// setting the dimension of the pane
         pack();
-        setVisible(true);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setVisible(true);// setting the visibility of the pane
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);// closes on x
 
-        configureEventHandlers();
+        configureEventHandlers();// calling the method
         }
         private void configureEventHandlers(){
         ratingSlider.addChangeListener(new ChangeListener() {
@@ -34,7 +34,7 @@ public class MovieGUI extends JFrame{
             public void stateChanged(ChangeEvent e) {
                 String valueLabelText = ratingSlider.getValue() + "Stars";
                 sliderValueLabel.setText(valueLabelText);
-                updateOpinion();
+                updateOpinion();//calls tbe updateOpinion method when the rating slider is changed
             }
         });
 
@@ -84,15 +84,15 @@ public class MovieGUI extends JFrame{
     private void updateOpinion(){
         String movieName = movieTitleTextField.getText().strip();
 
-        if (movieName.isEmpty()){
-            movieOpinionLabel.setText("Movie Opinion");
+        if (movieName.isEmpty()){// checking if the movieName is empty
+            movieOpinionLabel.setText("Movie Opinion");//if it is, it sets movieOpinionLabel to movie opinion text
             return;
         }
 
-        int rating = ratingSlider.getValue();
-        boolean seeAgain= wouldseeCheckBox.isSelected();
+        int rating = ratingSlider.getValue();// getting the slider as it is moved
+        boolean seeAgain= wouldseeCheckBox.isSelected();// setting a boolean
 
-        String template ="you rated %s %d stars. You %s see again.";
+        String template ="you rated %s %d stars. You %s see again.";// string template
 
        // String seeAgainString = "would";
         //if (!seeAgain){

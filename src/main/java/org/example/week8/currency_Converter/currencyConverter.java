@@ -18,6 +18,7 @@ public class currencyConverter extends JFrame {
     private  String kenyaShilling = "Ksh";
 
     private Map<String, Double> exchangeRates = Map.of(Euros, 0.84, Pounds, .09,kenyaShilling,127.27);
+    //creating a Map to set up the exchange rates
 
 currencyConverter(){
     setContentPane(mainPanel);
@@ -26,9 +27,9 @@ currencyConverter(){
     setVisible(true);
     setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-    currencyComboBox.addItem(Euros);
-    currencyComboBox.addItem(Pounds);
-    currencyComboBox.addItem(kenyaShilling);
+    currencyComboBox.addItem(Euros);// adding to the comboBox
+    currencyComboBox.addItem(Pounds);//adding to the comboBox
+    currencyComboBox.addItem(kenyaShilling);//adding to the comboBox
 
     getRootPane().setDefaultButton(convertButton);
 
@@ -37,12 +38,12 @@ currencyConverter(){
         public void actionPerformed(ActionEvent e) {
 
                 // what was type in Jfield dollarsTextField?
-                String dollarString = DollarsTextField.getText();
+                String dollarString = DollarsTextField.getText();// getting the text in the textfield
                 //converts to a number
             try {
-                double dollars = Double.parseDouble(dollarString);
-                String toCurrency = (String) currencyComboBox.getSelectedItem();
-                //() is used to carse
+                double dollars = Double.parseDouble(dollarString);//converting the text in the textfield to double
+                String toCurrency = (String) currencyComboBox.getSelectedItem();//setting up a string variable to store the combobox selected
+                //() is used to curse to change to string
 
                 double exchangeRate = exchangeRates.get(toCurrency);
                 //converts to euro
