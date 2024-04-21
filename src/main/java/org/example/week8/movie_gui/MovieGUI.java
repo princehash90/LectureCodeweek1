@@ -97,7 +97,7 @@ public class MovieGUI extends JFrame{
        // String seeAgainString = "would";
         //if (!seeAgain){
             //seeAgainString ="would not";
-        //}
+        //
         //this is alternative to if statement. it is called ternary operator. it is setting values based on a condition
         String seeAgainString = (seeAgain) ? "would": "would not";
 

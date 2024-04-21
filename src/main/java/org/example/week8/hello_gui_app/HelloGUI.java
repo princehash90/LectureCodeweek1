@@ -22,6 +22,7 @@ public class HelloGUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 //code for button goes here
                 myFirstLabel.setText("Hello GUI Programmers!!");
+                //this will be printed on clicking the button
             }
         });
 
